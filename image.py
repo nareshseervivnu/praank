@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monkey Prank 😂</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+
+            /* Beautiful background */
+            background: linear-gradient(
+                135deg,
+                #141e30,
+                #243b55,
+                #6a11cb,
+                #2575fc
+            );
+            background-size: 300% 300%;
+            animation: bgMove 8s ease infinite;
+        }
+
+        .container {
+            text-align: center;
+            padding: 25px;
+            width: 90%;
+            max-width: 420px;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.10);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            box-shadow: 0 0 35px rgba(0, 0, 0, 0.35);
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 30px;
+            margin-bottom: 10px;
+            text-shadow: 0 0 15px #ff00cc;
+        }
+
+        p {
+            color: #eee;
+            margin-bottom: 22px;
+            font-size: 16px;
+        }
+
+        .image-box {
+            width: 100%;
+            max-width: 300px;
+            margin: auto;
+            padding: 7px;
+            border-radius: 25px;
+
+            background: linear-gradient(
+                45deg,
+                #ff00cc,
+                #ffee00,
+                #00f2fe,
+                #ff00cc
+            );
+            background-size: 300% 300%;
+            animation: borderGlow 4s linear infinite,
+                       float 3s ease-in-out infinite;
+
+            box-shadow: 0 0 25px #ff00cc;
+        }
+
+        .image-box img {
+            display: block;
+            width: 100%;
+            height: auto;
+            min-height: 180px;
+            object-fit: cover;
+            border-radius: 19px;
+            border: 3px solid #fff;
+        }
+
+        .prank-text {
+            margin-top: 25px;
+            color: #ffeb3b;
+            font-size: 22px;
+            font-weight: bold;
+            animation: blink 1.5s infinite;
+        }
+
+        .btn {
+            margin-top: 18px;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 30px;
+            background: linear-gradient(45deg, #ff0080, #ff8c00);
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 5px 20px #ff008066;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.08);
+        }
+
+        @keyframes bgMove {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        @keyframes borderGlow {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 300% 50%; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.55; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>🐒 Secret Prank 😂</h1>
+        <p>Carefully dekho... kuch gadbad hai! 👀</p>
+
+        <div class="image-box">
+            <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV5PejEprSac1DHrqNY_OvjTdojXBAniI95Y30g8c65YzI7zDU674kmPs&s=10"
+                alt="Funny Monkey"
+            >
+        </div>
+
+        <div class="prank-text" id="message">
+            😂 Monkey Alert! 😂
+        </div>
+
+        <button class="btn" onclick="revealPrank()">
+            Click Me 😈
+        </button>
+    </div>
+
+    <script>
+        function revealPrank() {
+            document.getElementById("message").innerText =
+                "🤣 Surprise! Monkey ne pakad liya!";
+        }
+    </script>
+
+</body>
+</html>
